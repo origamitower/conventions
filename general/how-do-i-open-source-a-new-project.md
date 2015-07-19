@@ -117,6 +117,50 @@ styles out of the box, which makes just writing tests simpler.
 ```
 
 
+## Why would I *not* use your project?
+
+As important as the motivation for using your project is any drawbacks that
+people should be aware of. Truth be said, your project will not be better than
+all of the alternatives in all possible contexts (unless no alternative exists,
+in which case the comparison doesn't make sense). Your users should be aware of
+this, so they can make a better informed decision about whether to use your
+project or not.
+
+Drawbacks might include performance or efficiency problems, in which case you
+might want to tell people why they are there. Maybe you've decided that
+simplicity or extensibility were more important than raw performance? That's a
+reasonable decision, but your user might be looking for an efficient solution
+instead and they wouldn't be able to use your project in that context.
+
+Or maybe you've done the opposite, and decided to forgo purity for the sake of
+performance. For example, suppose you're designing a `Map` implementation for
+JavaScript, and the major difference from the standard shim is that your
+implementation has O(1) lookups. Well, from that description alone, it would be
+obvious for anyone that they should be using *your* project, because why would
+they use anything else when your project is clearly more efficient?
+
+Whatever the considerations are, that's what this section is supposed to tell
+your users:
+
+
+```markdown
+# JSMap
+
+A mutable Map<Object, Object> implementation for JS that supports O(1) lookups.
+
+
+## Drawbacks
+
+JSMap is able to have O(1) lookups by mutating the objects inserted in it and
+adding a special `__id` key, with a unique identifier that is used for looking
+up information for later retrieval. If you need the additional efficiency
+guarantees, mutating the keys may be OK.
+
+If you don't want key objects to be mutated, you can use ES6-shim's Map, which
+has O(n) lookups on objects, but doesn't mutate keys.
+```
+
+
 ## Can people use it?
 
 At this point, the person has decided that your project can help them solve the
