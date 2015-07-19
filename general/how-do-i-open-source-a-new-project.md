@@ -6,6 +6,12 @@ dealing with in our programs, and so we sit down and devise our own. Since that
 solution may be helpful to other people facing the same problem, we would also
 like to share it so other people can benefit from our work.
 
+> **NOTE**
+>
+> This document is a work in progress. Information may be missing, and no
+> section has been reviewed. Issues about this document should be reported on
+> the [issue tracker](https://github.com/origamitower/conventions/issues).
+
 ## Table of Contents
 
  -  [Why should other people care?](#why-should-other-people-care)
