@@ -6,6 +6,20 @@ dealing with in our programs, and so we sit down and devise our own. Since that
 solution may be helpful to other people facing the same problem, we would also
 like to share it so other people can benefit from our work.
 
+## Table of Contents
+
+ -  [Why should other people care?](#why-should-other-people-care)
+ -  [Why would I *not* use your project?](#why-would-i-not-use-your-project)
+ -  [Can people use it?](#can-people-use-it)
+     -  [Does it run at all?](#does-it-run-at-all)
+     -  [Should I use the project *today*?](#should-i-use-the-project-today)
+     -  [Anything I should be aware of when using it?](#anything-i-should-be-aware-of-when-using-it)
+ -  [Great! I want to use it. How do I do that?](#great-i-want-to-use-it-how-do-i-do-that)
+     -  [How do I install it?](#how-do-i-install-it)
+     -  [How do I make sure it works on my platform?](#how-do-i-make-sure-it-works-on-my-platform)
+     -  [How do I figure out which pieces I need to solve **my** problem?](#how-do-i-figure-out-which-pieces-i-need-to-solve-my-problem)
+
+
 
 ## Why should other people care?
 
@@ -385,7 +399,7 @@ On Arch you can install libgmp through pacman:
 
     $ sudo pacman -Ss libgmp-dev
 
-On Mac with [Homebrew]:
+On Mac with [Homebrew][]:
 
     $ brew install gmp
 
