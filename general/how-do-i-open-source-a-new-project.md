@@ -292,8 +292,113 @@ about each one of them.
 
 ### How do I install it?
 
+Before people can use your project, they have to be able to install it on their
+platform. This usually consists of downloading some distribution artifact and
+then loading that artifact somehow in the platform they're targeting.
+
+This section should include prominently the recommended way of installing your
+project, and should also include sections for other supported ways of installing
+it.
+
+It should also be noted that this section should include information on how to
+install your projects on **all** platforms you strictly support, as stated in
+the "Platform Support" section of your project. It should also include
+information on how to perform the installation using the native tools in those
+platforms, even if you recommend people to use tool X for that (in which case
+you also need to provide information on how to get tool X).
+
+For example, if you're distributing a JavaScript library:
+
+```markdown
+# My Library
+
+A short description.
+
+## Platform support
+
+Browsers (IE8+, Chrome, Safari 7+, Firefox, Opera), Node 0.10+.
 
 
+## Installing
+
+The recommended way is to install My Library through [npm][]:
+
+    $ npm install my-library
+
+> **NOTE**
+>
+> If you don't have npm, you'll need to install Node.js and npm in your system
+> before installing My Library. For browsers, you can follow the alternative
+> installation instructions instead.
+
+In the browser, you will need to use [Browserify][] to use the module.
+
+
+### Using My Library without modules
+
+If you're not already using Browserify for modules, you can
+[download a pre-compiled bundle][], or create a browser bundle by running:
+
+    $ npm install browserify --save-dev
+    $ ./node_modules/.bin/browserify -r my-library -s MyLibrary > my-library.js
+
+After that, you can load My Library by just adding a `<script>` tag and using
+the `MyLibrary` global object:
+
+    <script src="/path/to/my-library.js"></script>
+    <script>
+      MyLibrary.doThings();
+    </script>
+```
+
+In some contexts you won't have a package manager that solves the prerequisites
+problem for you. In those cases you need to tell people what they need before
+they can install your project, and how they can get what they need on all
+different platforms you support.
+
+For example:
+
+```markdown
+## BigInt
+
+Native module providing arbitrary precision integers for Node.
+
+## Installing
+
+### Prerequisites
+
+You'll need an environment correctly configured for compiling Node native
+modules (a C++ compiler toolchain, such as CLang or GCC on Linux, or MSVSC++ on
+Windows). See the [node-gyp's installation] documentation for more information
+on that.
+
+### Dependencies
+
+BigInt depends on the [libgmp][] library, which you'll need to install in your
+system and configure it so the linker can find it.
+
+On Ubuntu you can install libgmp through apt:
+
+    $ sudo apt-get install libgmp3-dev
+
+On Arch you can install libgmp through pacman:
+
+    $ sudo pacman -Ss libgmp-dev
+
+On Mac with [Homebrew]:
+
+    $ brew install gmp
+
+For all other platforms, you can try finding a suitable package on your package
+manager, or [install from source][] using the information provided by the libgmp
+package.
+
+### Install with npm
+
+To install BigInt with npm:
+
+    $ npm install bigint
+```
 
 
 [README]: ./how-to-write-a-good-readme.md
