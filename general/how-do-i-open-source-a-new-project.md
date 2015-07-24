@@ -389,7 +389,7 @@ Native module providing arbitrary precision integers for Node.
 
 You'll need an environment correctly configured for compiling Node native
 modules (a C++ compiler toolchain, such as CLang or GCC on Linux, or MSVSC++ on
-Windows). See the [node-gyp's installation] documentation for more information
+Windows). See the [node-gyp's installation][] documentation for more information
 on that.
 
 ### Dependencies
@@ -420,6 +420,58 @@ To install BigInt with npm:
     $ npm install bigint
 ```
 
+
+### How do I make sure it works on my platform?
+
+Once the user has finished installing your project, they need to make sure they
+have done it correctly, and that they are now ready to use it. For example, if
+your project's goal is to aid users maintaining different Node versions, you
+might want to tell them how to install different Node versions and how to
+execute them:
+
+```markdown
+# Purr
+
+( ... )
+
+## Usage
+
+After installing, the `purr` and `ipurr` binaries will be available for
+usage. You can verify that they're installed correctly by launching the
+interactive Purr command and typing expressions in it (the lines preceded by `>`
+indicate the interactive prompt):
+
+    $ bin/ipurr
+    Type :quit to exit (or ^D).
+    *** Loaded the Prelude from: /home/queen/Projects/Purr/Platform/Prelude.purr
+
+    > "Hello, world."
+    => (<string>) Hello, world.
+
+You can run (or compile) files using the `purr` command. You may try it with any
+of the examples provided in the `examples/` folder:
+
+    $ bin/purr examples/hello-world/Main.purr
+    Your name> Quil
+    Hello, Quil
+
+See `purr --help` and `ipurr --help` for more usage information.
+```
+
+For libraries and frameworks you might want to provide this verification while
+giving people a general feel of how they can use your library, and if
+applicable, the recommended workflow while working with it. This is generally
+done in an aptly-named "Getting Started" section, where users are guided through
+a "Hello World"-style project using your library. An example of this is the
+[Specify Getting Started documentation](http://specify.readthedocs.org/en/latest/quickstart/index.html).
+
+Since users are hardly interested on writing just a "Hello World" application,
+it's important that this section also 
+
+
+
+
+### How do I figure out which pieces I need to solve **my** problem?
 
 [README]: ./how-to-write-a-good-readme.md
 [Specify]: http://specify.origamitower.com/
