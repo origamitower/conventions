@@ -24,8 +24,10 @@ like to share it so other people can benefit from our work.
      -  [How do I install it?](#how-do-i-install-it)
      -  [How do I make sure it works on my platform?](#how-do-i-make-sure-it-works-on-my-platform)
      -  [How do I figure out which pieces I need to solve **my** problem?](#how-do-i-figure-out-which-pieces-i-need-to-solve-my-problem)
-
-
+ -  [Supporting your long-term users](#supporting-your-long-term-users)
+     -  [Letting users know you care about them](#letting-users-know-you-care-about-them)
+     -  [Letting users know their projects won't break tomorrow](#letting-users-know-their-projects-wont-break-tomorrow)
+        
 
 ## Why should other people care?
 
@@ -466,12 +468,88 @@ a "Hello World"-style project using your library. An example of this is the
 [Specify Getting Started documentation](http://specify.readthedocs.org/en/latest/quickstart/index.html).
 
 Since users are hardly interested on writing just a "Hello World" application,
-it's important that this section also 
-
-
+it's important that this section also points then at where they need to go to
+learn what they want your project to do for them.
 
 
 ### How do I figure out which pieces I need to solve **my** problem?
+
+All of the previous sections are, of course, useless if the potential user of
+your project can't figure out how to use it to solve their problem. Asking the
+user to look at the source code to try figuring that out isn't a particularly
+good thing. So, you'll need proper documentation.
+
+Documentation that answers this question can be separated in the following
+categories:
+
+ -  **API Reference documentation** allows the user to find answers to
+    questions such as "What does X do?", where **X** is an specific feature
+    that appears somewhere in the codebase/example/etc.
+
+ -  **Conceptual documentation** allows the user to learn the concepts that are
+    used throughout the project. Works better if presented as a narrated
+    documentation and following a natural progression.
+
+ -  **Tutorials** answers the question "How do I do X with this project?",
+    where **X** is a well defined problem.
+
+
+## Supporting your long-term users
+
+People use tools to help them build projects which they'll most likely need to
+support for a long time, which in turn means that they must be able to trust the
+tools they are using for all that time. If you care about your users, you should
+show that they can trust your project.
+
+
+### Letting users know you care about them
+
+You probably care about your project. But there's no effort to support the users
+that adopt your project, any advice in this document is useless. Programming
+ecosystems don't happen in a vacuum, so you need to show your users that you
+care about them: by properly managing your user community.
+
+You'll need at least:
+
+ -  A channel for people to communicate failures in your project. These should
+    be addressed in a timely fashion. GitHub issue tracker can have this role,
+    as it allows conversations to happen in the tracker.
+
+ -  A channel for people to talk to other human beings to understand better any
+    aspect of your project. A Mailing List, an IRC channel, a Slack channel, or
+    anything of the sorts. These should be properly moderated so people feel
+    welcome and safe.
+
+Since communities involve people interaction, your community should set the
+proper social rules in how people should interact, if you care about fostering a
+healthy and diverse community. This can be done through a Code of Conduct, and
+similar well-defined community expectations and boundaries.
+
+
+### Letting users know their projects won't break tomorrow
+
+When you commit to a particular project, you're usually making a long-term
+commitment. And to make the cost of adoption pay off, one must make sure that
+things will not randomly break. Your user needs to know:
+
+ -  **When to update**. This is answered by maintaining a proper Change log. No,
+    your Git history is not your change log, and it's meaningless to your actual
+    users.
+
+    In case of security and major bugs, you'll also want a way of reaching out
+    to your users and letting they know that they need to update.
+
+ -  **Whether they can update**. This is answered by maintaining a proper Change
+    log, which will tell the user when any breaking change is made. The breaking
+    change description must include a migration path.
+
+Version numbers answer both questions much quicker (but with much less details),
+as long as you have a clearly-defined versioning scheme. Using Semantic
+Versioning is recommended, since users will probably be familiar with that
+already.
+
+
+
 
 [README]: ./how-to-write-a-good-readme.md
 [Specify]: http://specify.origamitower.com/
