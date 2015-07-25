@@ -5,6 +5,9 @@ This repository contains a series of conventions and guidelines that are
 followed through the projects in the OrigamiTower and Folktale
 organisations. Feel free to use anything here for your projects elsewhere.
 
+- [Staff](staff.md)
+- [Code of Conduct](code-of-conduct.md)
+
 
 ## General
 
@@ -14,7 +17,6 @@ organisations. Feel free to use anything here for your projects elsewhere.
 
 ## Collaboration
 
-- Code of Conduct
 - How should I report bugs?
 - How should I send a patch/pull request?
 - How do I deal with bug reports and pull requests?
