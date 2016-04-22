@@ -16,11 +16,13 @@ through documentation.
 ## Table of Contents
 
   - [Why do we need documentation?](#why-do-we-need-documentation)
-  - [Documentation with Meta:Magical](#documentation-with-metamagical)
+  - [Metadata with Meta:Magical](#metadata-with-metamagical)
     - [Social meta-data](#social-meta-data)
     - [Execution meta-data](#execution-meta-data)
     - [Organisation meta-data](#organisation-meta-data)
     - [Usage meta-data](#usage-meta-data)
+    - [Common categories](#common-categories)
+  - [How to write documentation](#how-to-write-documentation)
 
 
 ## Why do we need documentation?
@@ -112,7 +114,7 @@ Tower's JavaScript projects. Note that they are not a general approach that can
 be applied to any other language, even if the principles can be useful for them.
 
 
-## Documentation with Meta:Magical
+## Metadata with Meta:Magical
 
 Most of the different kinds of documentation described in the previous section
 (and more) are attached to JavaScript objects using the
@@ -281,3 +283,64 @@ expect from using that code.
     value is an object where the key is the kind of exception thrown, and the
     value a description of when it's thrown and why.
 
+
+### Common categories
+
+A few standard categories to use when describing your objects:
+
+  - **Refining**, the function constructs a new object that's similar to some
+    object provided as argument, but with some new characteristics.
+
+  - **Constructing**, the function constructs a new object from scratch.
+
+  - **Inspecting**, the function is meant for debugging/runtime reflection.
+
+  - **Comparing and testing**, the function allows one to compare different
+    objects, or test some property in a particular object. `isFoo` functions
+    always fall in this category.
+
+  - **Extracting information**, retrieves part of a compound object.
+
+  - **Converting to other types**, allows converting from one type to another
+    (like `toString`).
+  
+  - **Transforming**, allows transforming some of the data represented by the
+    object.
+
+  - **Combining**, allows combining different objects to yield a new one.
+
+  - **Handling errors**, allows handling errors that may be represented
+    by/stored in the object.
+
+
+## How to write documentation
+
+> **TODO**  
+> This section is a stub and needs to be improved.
+
+Your documentation should look something like:
+
+```text
+[short descriptive summary of what the object/message does]
+
+## Why?
+
+[detailed description of WHY the object exists. This should provide
+ compelling arguments on why someone might use the object.]
+
+## Drawbacks
+
+[if applicable, provide a description of the problems people might
+ run into by using this object, because of some design trade-off
+ you made (maybe your API is easy to use and consistent, but not
+ very efficient? Detail that here)]
+
+## Architecture
+
+[For objects/modules, describe the general architecture, so people
+ know how each piece fits together, and can better reason about
+ its behaviour/contribute]
+```
+
+Where possible, examples of how to use an object/method/function should be
+provided. Examples are great for people to start playing around with.
