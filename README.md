@@ -12,7 +12,6 @@ organisations. Feel free to use anything here for your projects elsewhere.
 ## General
 
 - [How do I open source a new project?](./general/how-do-i-open-source-a-new-project.md)
-- How do I design programs?
 
 
 ## Collaboration
@@ -23,14 +22,6 @@ organisations. Feel free to use anything here for your projects elsewhere.
 - Communicating changes and planned features
 
 
-## Programming
-
-- How do I design programs in JavaScript?
-- How do I write my JavaScript programs?
-- How do I organise my source code repository?
-
-
 ## Documentation
 
-- How do I document expectations in untyped languages?
-- How do I document my code?
+- [How do I document my code?](./documentation/how-do-i-document-my-code.md)
