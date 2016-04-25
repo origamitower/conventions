@@ -17,3 +17,4 @@ organisations. Feel free to use anything here for your projects elsewhere.
 ## Documentation
 
 - [How do I document my code?](./documentation/how-do-i-document-my-code.md)
+- [Type notation](./documentation/type-notation.md)
