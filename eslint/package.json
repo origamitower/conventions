@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-origamitower",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Origami Tower JavaScript conventions for eslint.",
   "main": "./index.js",
   "repository": {
