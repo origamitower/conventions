@@ -18,6 +18,12 @@ module.exports = {
     "node": true
   },
   "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
   "rules": {
     "no-cond-assign": ["error", "always"],
     "no-debugger": "error",
@@ -92,7 +98,6 @@ module.exports = {
     "no-unused-vars": ["warn", { "varsIgnorePattern": "^_",
                                  "argsIgnorePattern": "^_" }],
 
-    "global-require": "error",
     "handle-callback-err": "error",
     "no-new-require": "error",
     "no-path-concat": "error",
