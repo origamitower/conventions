@@ -18,6 +18,7 @@ like to share it so other people can benefit from our work.
  -  [Why would I *not* use your project?](#why-would-i-not-use-your-project)
  -  [Can people use it?](#can-people-use-it)
      -  [Does it run at all?](#does-it-run-at-all)
+     -  [Can I legally use it?](#can-i-legally-use-it)
      -  [Should I use the project *today*?](#should-i-use-the-project-today)
      -  [Anything I should be aware of when using it?](#anything-i-should-be-aware-of-when-using-it)
  -  [Great! I want to use it. How do I do that?](#great-i-want-to-use-it-how-do-i-do-that)
@@ -246,6 +247,13 @@ the ones where things might still work (although there are no guarantees of
 such). It also lists, on the supported platforms, any limitations and
 restrictions that they might have, so people are aware of those problems when
 deploying their application on those platforms.
+
+
+### Can I legally use it?
+
+Choosing a proper licence is very important, since without them people won't
+be able to use your project **at all**. For details on licensing, see joepie91's
+[Licensing for Beginners](http://cryto.net/~joepie91/blog/2013/03/21/licensing-for-beginners/) post.
 
 
 ### Should I use the project *today*?
