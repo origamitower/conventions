@@ -302,7 +302,7 @@ type SyntaxError    <: Error
 type TypeError      <: Error
 type URIError       <: Error
 
-type Function = (Any...) -> Any
+type Function = (Any...) => Any
 
 (*** PARAMETERISED TYPES ***)
 type Object 'value
